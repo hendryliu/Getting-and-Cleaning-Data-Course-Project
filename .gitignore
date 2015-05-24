@@ -11,3 +11,8 @@
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
+
+.DS_Store
+
+# Ignore data files
+"UCI HAR Dataset/"
