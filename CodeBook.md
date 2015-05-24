@@ -1,4 +1,10 @@
 # Raw Data
-The raw data is available from ["Human Activity Recognition Using Smartphones Data Set"](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
-# Variables
+The information of raw data is available at ["Human Activity Recognition Using Smartphones Data Set"](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+The raw data contains training and test data set, both training and test data have features for each activity and subject.
 
+# Variables
+* `train_set` contains the combination of training feature data, class labels of activity names (1 to 6) and subject who performed the activity (1 to 30). Note that features are normalized and bounded within [-1,1].
+* `test_set` contains the combination of test feature data, class labels of activity names (1 to 6) and subject who performed the activity (1 to 30). Note that features are normalized and bounded within [-1,1].
+* `full_data` merges the `train_set` and `test_set`.
+* `full_data_mean_std` is a data frame, which extracts only the measurements on the mean and standard deviation (std) for each measurement
+* 
