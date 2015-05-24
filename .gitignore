@@ -15,4 +15,5 @@ vignettes/*.pdf
 .DS_Store
 
 # Ignore data files
-"UCI HAR Dataset/"
+#"UCI HAR Dataset/" # not working
+UCI\ HAR\ Dataset/
