@@ -12,6 +12,7 @@ label_train <- read.table(paste0(datafolder,"train/y_train.txt"))
 names(label_train)  <- "activity"
 subject_train <- read.table(paste0(datafolder,"train/subject_train.txt"))
 names(subject_train)  <- "subject"
+# merge train data, feature labels and subject labels into one singel train data set 
 train_set <- cbind(data_train,label_train,subject_train)
 
 # read test data set
@@ -21,17 +22,18 @@ label_test <- read.table(paste0(datafolder,"test/y_test.txt"))
 names(label_test)  <- "activity"
 subject_test <- read.table(paste0(datafolder,"test/subject_test.txt"))
 names(subject_test)  <- "subject"
+# merge test data, feature labels and subject labels into one singel test data set 
 test_set <- cbind(data_test,label_test,subject_test)
 
 # 1.Merges the training and the test sets to create one data set.
 full_data <- rbind(train_set,test_set)
-rm(train_set, test_set, data_train, data_test) # remove the large data set
+rm(train_set, test_set, data_train, data_test) # remove the large data set from memory
 print(object.size(full_data),unit="MB")
 
 # 2.Extracts only the measurements on the mean and standard deviation for each measurement.
 full_data_mean_std <- full_data[,grep("(mean|std)\\(\\)", data_label$V2)]
 full_data_mean_std <- cbind(full_data_mean_std,full_data[,c("activity","subject")])  # append activity and subject column to full_data_mean_std
-rm(full_data)
+rm(full_data)  # remove full_data from the memory
 
 # 3.Uses descriptive activity names to name the activities in the data set
 activity_labels <- read.table(paste0(datafolder,"activity_labels.txt"))
