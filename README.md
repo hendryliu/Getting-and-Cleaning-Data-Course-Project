@@ -13,6 +13,9 @@ R script to do the following.
 ##### `tidy_data.txt`
 Final output text file, which contains tidy data set with the average of each variable for each activity and each subject.
 
+##### `CodeBook.md`
+The file describes the variables, the data, and any transformations or work that you performed to clean up the data.
+
 ## Usage
 1. Git clone the repository.
 2. Download the compressed data to the repository root directory from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
